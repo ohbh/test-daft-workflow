@@ -50,8 +50,8 @@ def my_workflow(name: str) -> dict:
     print(f"Thanks, {name}!, daft job completed")
     return {"results": results}
 
-def main():
-    my_workflow("John")
+def main(name: str):
+    my_workflow(name)
 
 if __name__ == "__main__":
-    main()
+    main(name="John")
