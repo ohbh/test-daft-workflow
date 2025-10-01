@@ -49,3 +49,9 @@ def my_workflow(name: str) -> dict:
 
     print(f"Thanks, {name}!, daft job completed")
     return {"results": results}
+
+def main():
+    my_workflow("John")
+
+if __name__ == "__main__":
+    main()
