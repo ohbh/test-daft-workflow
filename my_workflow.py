@@ -54,4 +54,8 @@ def main(name: str):
     my_workflow(name)
 
 if __name__ == "__main__":
-    main(name="John")
+    import argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--name", type=str, required=True, help="Name to use in workflow")
+    args = parser.parse_args()
+    main(name=args.name)
