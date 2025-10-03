@@ -19,6 +19,7 @@ def mkdir() -> str:
 
 def my_workflow(name: str) -> dict:
     print(f"Hello, {name}!, starting a daft job")
+    raise Exception("test error")
     print(f"Thanks, {name}!, daft job completed")
     return {"results": "success"}
 
