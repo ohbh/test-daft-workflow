@@ -1,1 +1,4 @@
 project_id = "project-f548977471e9412cbdffd4d31286eed4"
+
+[dependencies]
+daft = ">=0.6.0"
