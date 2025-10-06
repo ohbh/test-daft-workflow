@@ -21,7 +21,7 @@ def my_workflow(name: str) -> dict:
     print(f"Hello, {name}!, starting a daft job")
 
     print(f"Thanks, {name}!, daft job completed")
-    processe_item(name, 300)
+    processe_item(name, 10)
 
     return {"results": "success"}
 
