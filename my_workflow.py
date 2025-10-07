@@ -23,6 +23,7 @@ def my_workflow(name: str) -> dict:
     print(f"Thanks, {name}!, daft job completed")
     processe_item(name, 10)
 
+    raise Exception("test error")
     return {"results": "success"}
 
 def main(name: str):
