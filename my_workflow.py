@@ -21,7 +21,10 @@ def my_workflow(name: str) -> dict:
     print(f"Hello, {name}!, starting a daft job")
 
     print(f"Thanks, {name}!, daft job completed")
-    processe_item(name, 10)
+    for k, v in os.environ.items():
+        print(f"ENV: {k}: {v}")
+
+
 
     return {"results": "success"}
 
