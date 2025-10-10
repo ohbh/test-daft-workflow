@@ -29,7 +29,7 @@ def my_workflow(name: str) -> dict:
     return {"results": "success"}
 
 def main(name: str):
-    my_workflow(name)
+    return my_workflow(name)
 
 if __name__ == "__main__":
     main(name="test")
