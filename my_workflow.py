@@ -1,20 +1,8 @@
 from __future__ import annotations
 
 import os
-import pathlib
-from re import S
 import time
 
-import daft
-from daft.functions.ai import embed_text
-
-
-def mkdir() -> str:
-    desktop = os.path.join(pathlib.Path("~").expanduser(), "Desktop")
-    timestamp = str(int(time.time()))
-    path = os.path.join(desktop, timestamp)
-    pathlib.Path(path).mkdir(exist_ok=True, parents=True)
-    return path
 
 
 def my_workflow(name: str) -> dict:
