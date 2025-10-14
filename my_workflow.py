@@ -7,6 +7,7 @@ import time
 
 def my_workflow(name: str, count: int) -> dict:
     print(f"Hello, {name}!, starting a daft job")
+    raise Exception("test error")
 
     for i in range(count):
         print(f"processing item {i}")
