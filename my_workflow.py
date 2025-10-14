@@ -8,6 +8,10 @@ import time
 def my_workflow(name: str) -> dict:
     print(f"Hello, {name}!, starting a daft job")
 
+    for i in range(100):
+        print(f"processing item {i}")
+        time.sleep(1)
+
     print(f"Thanks, {name}!, daft job completed")
     for k, v in os.environ.items():
         print(f"ENV: {k}: {v}")
