@@ -20,13 +20,13 @@ def my_workflow(name: str, count: int) -> dict:
 
     return {"results": "success"}
 
-def main(name: str):
-    return my_workflow(name)
+def main(name: str, count: int):
+    return my_workflow(name, count)
 
 if __name__ == "__main__":
     count = int(sys.argv[1]) if len(sys.argv) > 1 else 10
 
-    main(name="test", count=100)
+    main(name="test", count=count)
 
 def processe_item(name: str, count: int):
     for i in range(count):
