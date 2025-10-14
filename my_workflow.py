@@ -21,7 +21,7 @@ def my_workflow(name: str, count: int) -> dict:
     return {"results": "success"}
 
 def main(name: str, count: int):
-    return my_workflow(name, count)
+    return my_workflow(name, int(count))
 
 if __name__ == "__main__":
     count = int(sys.argv[1]) if len(sys.argv) > 1 else 10
