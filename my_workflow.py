@@ -1,14 +1,14 @@
 from __future__ import annotations
 
 import os
+import sys
 import time
 
 
-
-def my_workflow(name: str) -> dict:
+def my_workflow(name: str, count: int) -> dict:
     print(f"Hello, {name}!, starting a daft job")
 
-    for i in range(100):
+    for i in range(count):
         print(f"processing item {i}")
         time.sleep(1)
 
@@ -24,7 +24,9 @@ def main(name: str):
     return my_workflow(name)
 
 if __name__ == "__main__":
-    main(name="test")
+    count = int(sys.argv[1]) if len(sys.argv) > 1 else 10
+
+    main(name="test", count=100)
 
 def processe_item(name: str, count: int):
     for i in range(count):
