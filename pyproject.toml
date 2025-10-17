@@ -12,7 +12,6 @@ authors = [
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
-    "daft",
 ]
 
 [project.optional-dependencies]
