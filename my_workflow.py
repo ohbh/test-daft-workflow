@@ -3,6 +3,7 @@ from __future__ import annotations
 import os
 import sys
 import time
+import requests
 
 
 def my_workflow(name: str, count: int) -> dict:
@@ -12,13 +13,10 @@ def my_workflow(name: str, count: int) -> dict:
         print(f"processing item {i}")
         time.sleep(1)
 
-    print(f"Thanks, {name}!, daft job completed")
-    for k, v in os.environ.items():
-        print(f"ENV: {k}: {v}")
+    response = requests.get("https://icanhazip.com")
+    print(f"My IP is: {response.text}")
 
-
-
-    return {"results": "success"}
+    return {"results": response.text}
 
 def main(name: str, count: int):
     return my_workflow(name, int(count))
