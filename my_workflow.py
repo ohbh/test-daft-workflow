@@ -9,6 +9,9 @@ import requests
 def my_workflow(name: str, count: int) -> dict:
     print(f"Hello, {name}!, starting a daft job")
 
+    for key, value in os.environ.items():
+        print(f"{key}: {value}")
+
     for i in range(count):
         print(f"processing item {i}")
         time.sleep(1)
